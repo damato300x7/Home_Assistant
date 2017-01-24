@@ -1,0 +1,98 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: The D'Amato Homestead
+  # Location required to calculate the time the sun rises and sets
+  latitude: 40.3212
+  longitude: 79.3795
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 577
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/New_York
+  customize:
+   binary_sensor.key_1:
+    friendly_name: Dan's Key
+    icon: mdi:key-variant
+   binary_sensor.key_2:
+    friendly_name: Brandy's Key
+    icon: mdi:key-variant
+   binary_sensor.key_3:
+    friendly_name: Lisa's Key
+    icon: mdi:key-variant
+   binary_sensor.key_4:
+    friendly_name: Eric's Key
+    icon: mdi:key-variant
+   binary_sensor.laundry_room_gate:
+    friendly_name: Laundry Room Gate
+    icon: mdi:gate
+   binary_sensor.bathroom_door:
+    friendly_name: Bathroom Door
+    icon: mdi:glassdoor
+   sensor.yr_symbol:
+    friendly_name: Weather Symbol
+
+sensor.sabnzbd:
+  platform: sabnzbd
+  host: 10.0.1.13
+  port: 8080
+  api_key: !secrets sabnzbd_api
+  monitored_variables:
+    - current_status'
+    - 'speed'
+    - 'queue_size'
+    - 'queue_remaining'
+    - 'disk_size'
+    - 'disk_free'
+
+wink:
+  email: damato300x7@me.com
+  password: !secrets winkPassword
+  client_id: !secrets winkClientID
+  client_secret: !secrets winkClientSecret
+
+# Show links to resources in log and frontend
+#introduction:
+
+# Enables the frontend
+frontend:
+
+http:
+  # Uncomment this to add a password (recommended!)
+  # api_password: PASSWORD
+  # Uncomment this if you are using SSL or running in Docker etc
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+# Weather Prediction
+sensor:
+  platform: yr
+
+# Text to speech
+tts:
+  platform: google
+
+
+mqtt:
+  broker: 127.0.0.1
+  port: 1883
+  client_id: home-assistant-1
+  username: pi
+  password: raspberry
