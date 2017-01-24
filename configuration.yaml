@@ -2,8 +2,8 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: The D'Amato Homestead
   # Location required to calculate the time the sun rises and sets
-  latitude: 40.3212
-  longitude: 79.3795
+  latitude: 40.20338
+  longitude: -79.27458
   # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 577
   # metric for Metric, imperial for Imperial
@@ -32,18 +32,12 @@ homeassistant:
    sensor.yr_symbol:
     friendly_name: Weather Symbol
 
-sensor.sabnzbd:
-  platform: sabnzbd
-  host: 10.0.1.13
-  port: 8080
-  api_key: !secret sabnzbd_api
-  monitored_variables:
-    - current_status'
-    - 'speed'
-    - 'queue_size'
-    - 'queue_remaining'
-    - 'disk_size'
-    - 'disk_free'
+weblink:
+  entities:
+    - name: Google
+      url: http://www.google.com
+    - name: Home Assistant
+      url: https://home-assistant.io
 
 wink:
   email: damato300x7@me.com
