@@ -36,7 +36,7 @@ sensor.sabnzbd:
   platform: sabnzbd
   host: 10.0.1.13
   port: 8080
-  api_key: !secrets sabnzbd_api
+  api_key: c7e39f775a7626c9572a64c620839cd2
   monitored_variables:
     - current_status'
     - 'speed'
@@ -47,9 +47,9 @@ sensor.sabnzbd:
 
 wink:
   email: damato300x7@me.com
-  password: !secrets winkPassword
-  client_id: !secrets winkClientID
-  client_secret: !secrets winkClientSecret
+  password: Dart2013
+  client_id: c026aa093e5bd856a132e5ab6d056636
+  client_secret: a57f180f721bed1562a35e88d8e77193
 
 # Show links to resources in log and frontend
 #introduction:
