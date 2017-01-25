@@ -1,0 +1,16 @@
+### SENSORS ###
+
+# Weather Icon #
+- platform: yr
+
+# SABnzbd #
+- platform: sabnzbd
+  host: 10.0.1.13
+  api_key: !secret sabnzbd_api
+  monitored_variables:
+    - 'current_status'
+    - 'speed'
+    - 'queue_size'
+    - 'queue_remaining'
+    - 'disk_size'
+    - 'disk_free'
