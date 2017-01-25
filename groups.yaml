@@ -1,0 +1,52 @@
+### GROUPS ###
+
+## Groups ##
+Bedroom:
+  - light.bed_danny_light
+  - light.bed_brandy_light
+Livingroom:
+  - light.light_above_chase
+  - light.light_at_end_of_livingroom_steps
+  - light.livingroom_by_tv
+  - light.livingroom_candle_warmer
+  - switch.bay_window
+Kitchen:
+  - light.kitchen_2
+  - switch.kitchen_1
+  - light.kitchen_candle_warmer
+SABnzbd:
+  - sensor.sabnzbd_status
+  - sensor.sabnzbd_disk
+  - sensor.sabnzbd_disk_free
+  - sensor.sabnzbd_left
+  - sensor.sabnzbd_queue
+  - sensor.sabnzbd_speed
+FrontDoor:
+  - lock.front_door
+  - binary_sensor.key_1
+  - binary_sensor.key_2
+  - binary_sensor.key_3
+  - binary_sensor.key_4
+Environment:
+  - climate.home
+  - sensor.sensor_temperature
+  - sensor.yr_symbol
+  - sun.sun
+
+## Views ##
+
+bedroom_view:
+  name: Bedroom
+  view: yes
+  entities:
+    - group.Bedroom
+livingroom_view:
+  name: Livingroom
+  view: yes
+  entities:
+    - group.Livingroom
+kitchen_view:
+  name: Kitchen
+  view: yes
+  entities:
+    - group.Kitchen

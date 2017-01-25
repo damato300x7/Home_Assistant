@@ -1,6 +1,6 @@
 homeassistant:
   # Name of the location where Home Assistant is running
-  name: The D'Amato Homestead
+  name: Home
   # Location required to calculate the time the sun rises and sets
   latitude: 40.20338
   longitude: -79.27458
@@ -10,27 +10,7 @@ homeassistant:
   unit_system: imperial
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/New_York
-  customize:
-   binary_sensor.key_1:
-    friendly_name: Dan's Key
-    icon: mdi:key-variant
-   binary_sensor.key_2:
-    friendly_name: Brandy's Key
-    icon: mdi:key-variant
-   binary_sensor.key_3:
-    friendly_name: Lisa's Key
-    icon: mdi:key-variant
-   binary_sensor.key_4:
-    friendly_name: Eric's Key
-    icon: mdi:key-variant
-   binary_sensor.laundry_room_gate:
-    friendly_name: Laundry Room Gate
-    icon: mdi:gate
-   binary_sensor.bathroom_door:
-    friendly_name: Bathroom Door
-    icon: mdi:glassdoor
-   sensor.yr_symbol:
-    friendly_name: Weather Symbol
+  customize: !include customize.yaml
 
 weblink:
   entities:
@@ -44,6 +24,18 @@ wink:
   password: !secret winkPassword
   client_id: !secret winkClientID
   client_secret: !secret winkClientSecret
+  
+device_tracker:
+  - platform: nmap_tracker
+    hosts: 10.0.1.20/30
+    exclude:
+     - 10.0.1.44
+
+# Sensors #
+sensor: !include devices/sensors.yaml
+
+# Groups #
+group: !include groups.yaml
 
 # Show links to resources in log and frontend
 #introduction:
@@ -76,8 +68,8 @@ logbook:
 sun:
 
 # Weather Prediction
-sensor:
-  platform: yr
+#sensor:
+  #platform: yr
 
 # Text to speech
 tts:

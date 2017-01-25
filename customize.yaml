@@ -1,0 +1,65 @@
+### CUSTOMIZE ###
+
+# Lock Keys #
+binary_sensor.key_1:
+ friendly_name: Dan's Key
+ icon: mdi:key-variant
+binary_sensor.key_2:
+ friendly_name: Brandy's Key
+ icon: mdi:key-variant
+binary_sensor.key_3:
+ friendly_name: Lisa's Key
+ icon: mdi:key-variant
+binary_sensor.key_4:
+ friendly_name: Eric's Key
+ icon: mdi:key-variant
+
+# Door Sensors #
+binary_sensor.laundry_room_gate:
+ friendly_name: Laundry Room Gate
+ icon: mdi:gate
+binary_sensor.bathroom_door:
+ friendly_name: Bathroom Door
+ icon: mdi:glassdoor
+  
+# Weather #
+sensor.yr_symbol:
+ friendly_name: Weather Symbol
+ 
+# Lights #
+light.bed_danny_light:
+ friendly_name: Danny's Nightstand
+ icon: mdi:lamp
+light.bed_brandy_light:
+ friendly_name: Brandy's Nightstand
+ icon: mdi:lamp
+light.light_above_chase:
+ friendly_name: Hanging Lamp
+ icon: mdi:lamp
+light.light_at_end_of_livingroom_steps:
+ friendly_name: Tall Lamp
+ icon: mdi:lamp
+light.livingroom_by_tv:
+ friendly_name: Lamp by TV
+ icon: mdi:lamp
+light.livingroom_candle_warmer:
+ friendly_name: Candle Warmer
+ icon: mdi:candle
+switch.bay_window:
+ friendly_name: Bay Window Outlet
+ icon: mdi:power-plug
+light.kitchen_candle_warmer:
+ friendly_name: Candle Warmer
+ icon: mdi:candle
+light.kitchen_2:
+ friendly_name: Light by Window
+ icon: mdi:spotlight-beam
+switch.kitchen_1:
+ friendly_name: Light in Center
+ icon: mdi:spotlight-beam
+climate.home:
+ friendly_name: Livingroom Temp
+ icon: mdi:thermometer-lines
+sensor.sensor_temperature:
+ friendly_name: Hallway Temp
+ icon: mdi:thermometer-lines
