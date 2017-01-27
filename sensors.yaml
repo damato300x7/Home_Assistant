@@ -1,8 +1,5 @@
 ### SENSORS ###
 
-# Weather Icon #
-- platform: yr
-
 # SABnzbd #
 - platform: sabnzbd
   host: 10.0.1.13
@@ -14,3 +11,13 @@
     - 'queue_remaining'
     - 'disk_size'
     - 'disk_free'
+
+## Yahoo Weather ##
+
+- platform: yweather
+  monitored_conditions:
+    - weather
+    - weather_current
+    - temp_min
+    - temp_max
+    - temperature

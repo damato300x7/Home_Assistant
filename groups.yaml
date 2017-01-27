@@ -21,17 +21,28 @@ SABnzbd:
   - sensor.sabnzbd_left
   - sensor.sabnzbd_queue
   - sensor.sabnzbd_speed
-FrontDoor:
+Front Door:
   - lock.front_door
   - binary_sensor.key_1
   - binary_sensor.key_2
   - binary_sensor.key_3
   - binary_sensor.key_4
+Rest of House:
+  - switch.pool_pump
+  - light.shower_1
+  - light.shower_2
+  - light.hall_lights
+  - light.laundry
+  - light.sunporch
+  - switch.bottom_light_load
 Environment:
   - climate.home
   - sensor.sensor_temperature
-  - sensor.yr_symbol
-  - sun.sun
+  - sensor.yweather_condition
+  - sensor.yweather_current
+  - sensor.yweather_temperature
+  - sensor.yweather_temperature_max
+  - sensor.yweather_temperature_min
 
 ## Views ##
 

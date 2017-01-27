@@ -1,6 +1,6 @@
 ### CUSTOMIZE ###
 
-# Lock Keys #
+## Lock Keys ##
 binary_sensor.key_1:
  friendly_name: Dan's Key
  icon: mdi:key-variant
@@ -14,17 +14,29 @@ binary_sensor.key_4:
  friendly_name: Eric's Key
  icon: mdi:key-variant
 
-# Door Sensors #
+## Door Sensors ##
 binary_sensor.laundry_room_gate:
  friendly_name: Laundry Room Gate
  icon: mdi:gate
 binary_sensor.bathroom_door:
  friendly_name: Bathroom Door
  icon: mdi:glassdoor
-  
-# Weather #
-sensor.yr_symbol:
- friendly_name: Weather Symbol
+ 
+## Motion Sensor ##
+binary_sensor.sensor_motion:
+ friendly_name: Hall  Motion  Sensor
+ 
+ ## Yahoo Weather ##
+sensor.yweather_current:
+ friendly_name: Current Weather
+sensor.yweather_condition:
+ friendly_name: Current Condition
+sensor.yweather_temperature:
+ friendly_name: Curent Temperature
+sensor.yweather_temperature_max:
+ friendly_name: Max Temperature
+sensor.yweather_temperature_min:
+ friendly_name: Min Temperature
  
 # Lights #
 light.bed_danny_light:
@@ -63,3 +75,31 @@ climate.home:
 sensor.sensor_temperature:
  friendly_name: Hallway Temp
  icon: mdi:thermometer-lines
+switch.pool_pump:
+ friendly_name: Pool Pump Outlet
+ icon: mdi:pool
+light.shower_1:
+ friendly_name: Shower 1
+ icon: mdi:water
+light.shower_2:
+ friendly_name: Shower 2
+ icon: mdi:water
+light.hall_lights:
+ friendly_name: Hall Lights
+ icon: mdi:spotlight-beam
+light.laundry:
+ friendly_name: Laundry Room
+ icon: mdi:tshirt-crew
+light.sunporch:
+ friendly_name: Sunporch
+ icon: mdi:weather-sunny
+switch.bottom_light_load:
+ friendly_name: Not Used
+ icon: mdi:close-circle
+
+## Wink ##
+
+binary_sensor.wink_relays_bottom_button_hub:
+ friendly_name: Wink        Relay
+binary_sensor.hub_hub:
+ friendly_name: Wink         Hub
